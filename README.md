@@ -15,4 +15,3 @@ Authors:
 - Jesus Alonso Abad
 - Sergio Martin Reizabal
 - Javier Pampliega Garcia
-prueba
