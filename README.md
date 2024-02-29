@@ -13,3 +13,5 @@ Authors:
 
 - Carlos Lopez Nozal
 - Jesus Alonso Abad
+- Sergio Martin Reizabal
+- Javier Pampliega Garcia
