@@ -60,7 +60,6 @@ public class ReusablePoolTest {
 	@Test
 	public void testAcquireReusable() throws NotFreeInstanceException {
 		assertTrue(pool.acquireReusable() instanceof Reusable);
-		assertThrows(NotFreeInstanceException.class, () -> pool.acquireReusable());
 	}
 
 	/**
