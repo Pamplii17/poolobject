@@ -3,7 +3,7 @@ poolobject
 
 [![Java CI](https://github.com/Sermare16/poolobject/actions/workflows/ci_jdk11_build.yml/badge.svg)](https://github.com/Sermare16/poolobject/actions/workflows/ci_jdk11_build.yml) 
 [![Java CI](https://github.com/Sermare16/poolobject/actions/workflows/ci_jdk1.8_build_test.yml/badge.svg)](https://github.com/Sermare16/poolobject/actions/workflows/ci_jdk1.8_build_test.yml) 
-[![codecov](https://codecov.io/gh/Sermare16/poolobject/graph/badge.svg?token=NvQ17D5kct)](https://codecov.io/gh/clopezno/poolobject)
+[![codecov](https://codecov.io/gh/Sermare16/poolobject/graph/badge.svg?token=NvQ17D5kct)](https://codecov.io/gh/Sermare16/poolobject)
 
 Java code example of creational design pattern pool object
 
