@@ -7,7 +7,9 @@ import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import ubu.gii.dass.c01.DuplicatedInstanceException;
 import ubu.gii.dass.c01.NotFreeInstanceException;
@@ -20,6 +22,9 @@ import ubu.gii.dass.c01.ReusablePool;
  *
  */
 public class ReusablePoolTest {
+
+	@Rule
+	public ExpectedException thrown = ExpectedException.none();
 
 	private ReusablePool pool;
 
@@ -60,6 +65,8 @@ public class ReusablePoolTest {
 	@Test
 	public void testAcquireReusable() throws NotFreeInstanceException {
 		assertTrue(pool.acquireReusable() instanceof Reusable);
+		thrown.expect(NotFreeInstanceException.class);
+    	pool.acquireReusable();
 	}
 
 	/**
