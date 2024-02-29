@@ -11,6 +11,7 @@ import org.junit.Test;
 
 /**
  * @author Sergio Martín Reizábal
+ * @author Javier Pampliega García
  *
  */
 public class ReusablePoolTest {
