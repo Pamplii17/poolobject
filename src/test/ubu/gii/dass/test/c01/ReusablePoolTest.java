@@ -33,7 +33,7 @@ public class ReusablePoolTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
-		pool = ReusablePool.getInstance();
+		this.pool = ReusablePool.getInstance();
 	}
 
 	/**
@@ -41,7 +41,7 @@ public class ReusablePoolTest {
 	 */
 	@After
 	public void tearDown() throws Exception {
-		pool = null;
+		this.pool.setInstance(null);
 	}
 
 	/**
@@ -50,11 +50,11 @@ public class ReusablePoolTest {
 	
 	@Test
 	public void testGetInstance() {
-		ReusablePool pool = ReusablePool.getInstance();
+		ReusablePool pool2 = ReusablePool.getInstance();
 
-		assertNotNull(pool);
+		assertNotNull(pool2);
 
-		assertTrue(pool instanceof ReusablePool);
+		assertTrue(pool2 instanceof ReusablePool);
 	}
 	
 	/**
@@ -65,8 +65,6 @@ public class ReusablePoolTest {
 
 	@Test
 	public void testAcquireReusable() {
-		pool = null;
-		pool = ReusablePool.getInstance();
 		try {
 			Reusable reusable = pool.acquireReusable();
 			assertNotNull(reusable);
@@ -81,7 +79,7 @@ public class ReusablePoolTest {
 	 */
 	@Test
 	public void testReleaseReusable() throws DuplicatedInstanceException{
-
+	
 		// Al principio ReusablePool tiene únicamente dos instancias de Resusable
 		assertTrue(pool.getVector().size() == 2);
 		try {
@@ -115,8 +113,6 @@ public class ReusablePoolTest {
 	
 	@Test
     public void testAcquireReusableWhenNoInstancesAvailableThrowsException() throws NotFreeInstanceException, DuplicatedInstanceException{
-        
-		ReusablePool pool = ReusablePool.getInstance();
 
         // Intentamos adquirir dos instancias
         Reusable reusable1 = pool.acquireReusable();
