@@ -114,7 +114,7 @@ public class ReusablePoolTest {
 	@Test
     public void testAcquireReusableWhenNoInstancesAvailableThrowsException() throws NotFreeInstanceException, DuplicatedInstanceException{
 
-        // Intentamos adquirir dos instancias
+        // Intentamos adquirir dos instancias de reusables
         Reusable reusable1 = pool.acquireReusable();
         Reusable reusable2 = pool.acquireReusable();
 
