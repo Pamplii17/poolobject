@@ -60,4 +60,12 @@ public final class ReusablePool{
 			throw(new DuplicatedInstanceException());
 		}
 	}
+
+	/**
+	 * 
+	 * 
+	 */
+	public Vector<Reusable> getVector(){
+		return reusables;
+	}
 } 
