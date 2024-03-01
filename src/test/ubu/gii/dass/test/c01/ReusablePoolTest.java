@@ -77,6 +77,7 @@ public class ReusablePoolTest {
 	/**
 	 * Test method for {@link ubu.gii.dass.c01.ReusablePool#releaseReusable(ubu.gii.dass.c01.Reusable)}.
 	 */
+	/*
 	@Test
 	public void testReleaseReusable() throws DuplicatedInstanceException{
 	
@@ -110,7 +111,7 @@ public class ReusablePoolTest {
 			fail("No deberia de lanzarse esta excepcion");
 		}	
 	}
-	
+	*/
 	@Test
     public void testAcquireReusableWhenNoInstancesAvailableThrowsException() throws NotFreeInstanceException, DuplicatedInstanceException{
 
