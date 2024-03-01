@@ -62,8 +62,7 @@ public final class ReusablePool{
 	}
 
 	/**
-	 * 
-	 * 
+	 * Metodo que retorna un objeto Vector<Reusable>
 	 */
 	public Vector<Reusable> getVector(){
 		return reusables;
