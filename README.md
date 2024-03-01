@@ -15,3 +15,12 @@ Authors:
 - Jesus Alonso Abad
 - Sergio Martín Reizábal
 - Javier Pampliega García
+
+
+# **Introducción**
+En esta practica el objetivo ha sido la creacion de pruebas unitarias, asi como, la implementacion de un sistema de integración continua empleando la herramienta GitHub Actions. Se ha empleado como herramienta de medición de calidad basada en el cubrimiento de código, la herramienta Codecov.
+
+# **Solución**
+
+
+# **¿Se ha realizado trabajo en equipo?**
