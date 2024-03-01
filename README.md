@@ -14,6 +14,7 @@ Authors:
 - Carlos Lopez Nozal
 - Jesus Alonso Abad
 - Sergio Martín Reizábal
+<<<<<<< HEAD
 - Javier Pampliega García
 
 
@@ -24,3 +25,7 @@ En esta practica el objetivo ha sido la creacion de pruebas unitarias, asi como,
 
 
 # **¿Se ha realizado trabajo en equipo?**
+=======
+- Javier Pampliega Garcia
+
+>>>>>>> db2e092557bb83597c8b7f4f60b7ff9f50f1051f
