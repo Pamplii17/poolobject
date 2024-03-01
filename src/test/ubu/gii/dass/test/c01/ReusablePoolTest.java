@@ -27,6 +27,7 @@ public class ReusablePoolTest {
 	public ExpectedException thrown = ExpectedException.none();
 
 	private ReusablePool pool;
+	private ReusablePool pool2;
 
 	/**
 	 * @throws java.lang.Exception
@@ -34,6 +35,7 @@ public class ReusablePoolTest {
 	@Before
 	public void setUp() throws Exception {
 		pool = ReusablePool.getInstance();
+		pool2 = ReusablePool.getInstance();
 	}
 
 	/**
@@ -79,6 +81,12 @@ public class ReusablePoolTest {
 	@Test
 	public void testReleaseReusable() throws DuplicatedInstanceException{
 		
+		try {
+			Reusable reusablePool2 = pool2.acquireReusable();
+			pool.releaseReusable(reusablePool2);
+			assertTrue(pool.getVector().contains(reusablePool2));
+		} catch (NotFreeInstanceException ex) {
+			fail("No deberia de lanzarse esta excepcion");
+		}	
 	}
-
 }
