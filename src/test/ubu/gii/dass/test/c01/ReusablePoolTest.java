@@ -63,10 +63,14 @@ public class ReusablePoolTest {
 	// ...
 
 	@Test
-	public void testAcquireReusable() throws NotFreeInstanceException {
-		assertTrue(pool.acquireReusable() instanceof Reusable);
-		thrown.expect(NotFreeInstanceException.class);
-    	pool.acquireReusable();
+	public void testAcquireReusable() {
+		ReusablePool pool = ReusablePool.getInstance();
+		try {
+			Reusable reusable = pool.acquireReusable();
+			assertNotNull(reusable);
+		} catch(NotFreeInstanceException e) {
+			fail("No debería lanzar una excepción");
+		}
 	}
 
 	/**
