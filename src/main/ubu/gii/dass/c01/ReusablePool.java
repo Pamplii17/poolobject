@@ -67,4 +67,8 @@ public final class ReusablePool{
 	public Vector<Reusable> getVector(){
 		return reusables;
 	}
+	
+	public void setInstance(ReusablePool i) {
+		ReusablePool.instance = i;
+	}
 } 
