@@ -80,13 +80,8 @@ public class ReusablePoolTest {
 	
 	@Test
 	public void testReleaseReusable() throws DuplicatedInstanceException{
-<<<<<<< HEAD
-
-		//Al principio ReusablePool tiene únicamente dos instancias de Resusable
-=======
 	
 		// Al principio ReusablePool tiene únicamente dos instancias de Resusable
->>>>>>> 2bbc43434e4a2090af2ef2455d2ec50e0747e7b3
 		assertTrue(pool.getVector().size() == 2);
 		try {
 			// Obtenemos el primer Reusable
