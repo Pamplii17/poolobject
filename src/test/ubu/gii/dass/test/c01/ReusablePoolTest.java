@@ -72,6 +72,23 @@ public class ReusablePoolTest {
 			fail("No debería lanzar una excepción");
 		}
 	}
+	
+	@Test
+    public void testAcquireReusableWhenNoInstancesAvailableThrowsException() throws NotFreeInstanceException {
+        // Configuramos la regla para esperar una excepción específica
+        thrown.expect(NotFreeInstanceException.class);
+        thrown.expectMessage("No hay más instancias reutilizables disponibles. Reintentalo más tarde");
+
+        // Intentamos adquirir dos instancias
+        Reusable reusable1 = pool.acquireReusable();
+        Reusable reusable2 = pool.acquireReusable();
+
+        assertNotNull(reusable1);
+        assertNotNull(reusable2);
+        
+        // Intentamos adquirir una tercera instancia (debería lanzar una excepción)
+        Reusable reusable3 = pool.acquireReusable();
+    }
 
 	/**
 	 * Test method for {@link ubu.gii.dass.c01.ReusablePool#releaseReusable(ubu.gii.dass.c01.Reusable)}.
