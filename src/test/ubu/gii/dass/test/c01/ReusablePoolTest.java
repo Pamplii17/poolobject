@@ -138,4 +138,19 @@ public class ReusablePoolTest {
         assertNotNull(reusable4);
         
     }
+
+	@Test
+	public void testReleaseReusableDuplicated() throws NotFreeInstanceException{
+
+		try {
+			Reusable reusable = pool.acquireReusable();
+			pool.releaseReusable(reusable);
+
+			// Con la segunda llamada al metodo releaseReusable se deberia de lanzar la excepcion DuplicatedInstanceException
+			pool.releaseReusable(reusable);
+			fail("Deberia haber lanzado una excepcion");
+		} catch (DuplicatedInstanceException e) {
+			// Excepcion esperada
+		}
+	}
 }
