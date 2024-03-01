@@ -77,16 +77,11 @@ public class ReusablePoolTest {
 	/**
 	 * Test method for {@link ubu.gii.dass.c01.ReusablePool#releaseReusable(ubu.gii.dass.c01.Reusable)}.
 	 */
-	/*
+	
 	@Test
 	public void testReleaseReusable() throws DuplicatedInstanceException{
-<<<<<<< HEAD
-
-		//Al principio ReusablePool tiene únicamente dos instancias de Resusable
-=======
 	
 		// Al principio ReusablePool tiene únicamente dos instancias de Resusable
->>>>>>> 2bbc43434e4a2090af2ef2455d2ec50e0747e7b3
 		assertTrue(pool.getVector().size() == 2);
 		try {
 			// Obtenemos el primer Reusable
@@ -116,7 +111,7 @@ public class ReusablePoolTest {
 			fail("No deberia de lanzarse esta excepcion");
 		}	
 	}
-	*/
+	
 	@Test
     public void testAcquireReusableWhenNoInstancesAvailableThrowsException() throws NotFreeInstanceException, DuplicatedInstanceException{
 
