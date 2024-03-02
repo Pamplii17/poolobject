@@ -64,10 +64,24 @@ Se puede observar que el codigo aparece remarcado en verde, esto nos quiere deci
 ![Cobertura no realizada](img/coverageNoHecho.png)
 
 ## **¿Cuál es el esfuerzo invertido en realizar la actividad?**
+La realización de esta práctica se ha llevado a cabo a través de distintas labores. Estas son la implementación de un sistema de integración continua, conexión con Codecov, creación de pruebas unitarias y redacción del informe. Todas estas tareas se han realizado en distintos dias, empleando un par de horas. A pesar de que la dificultad no haya sido elevada si que han surgido inconvenientes durante el desarrollo de la misma. Nos vimos forzados a abandonar temporalmente la realización de la práctica debido a la caida de los servicios de push y actions de GitHub. Por el resto, se puede decir que el esfuerzo empleado ha sido de unas 12-14 horas.
 
+Otra forma de medir el esfuerzo dedicado podría ser a través de los commits. Estos nos aportan una valiosa información, que puede ser las lineas modificadas (tanto añadidas como borradas). A continuación se muestra la información sobre los commits:
+
+![Información Commits](img/informacionCommits.png)
 
 ## **¿Cuál es el número de fallos encontrados en el código original?**
+En la realización de la práctica se han detectado distintos errores, que han dificultado un poco la creación de las pruebas unitarias. Se exponen a continuación los errores encontrados:
 
+### **Atributos privados**
+Como la clase ReusablePool sigue el patrón Singleton (solo se puede crear una instancia del objeto), tenemos que los atributos de la clase son privados. Este hecho dificulta el acceso a estos atributos desde otra clase. Como solución alternativa, hemos planteado la creación de un método "get" para consultar el atributo que requeriamos para la implementación de las pruebas unitarias.
+
+![Metodo getVector](img/getVector.png)
+
+### **Ausencia de versión JUnit 5**
+La versión JUnit 5 incluye numerosos métodos assert que permiten comprobar distintos casos. Uno de ellos es el assertThrows, que nos permite comprobar el lanzamiento de excepciones, al contar con la version 4 de JUnit ya no disponemos con este metodo, por lo tanto, tenemos que plantear otra forma de comprobar el lanzamiento de excepciones. Para ello hemos empleado las estructuras try-catch, como por ejemplo:
+![Test acquireReusable](img/testAcquireReusable.png)
 
 ## **¿El proceso de integración continua realizado ha sido de calidad?**
-
+Sí, el proceso de integración continua ha sido de calidad. Esto se debe a que se ha empleado GitHub Actions para el uso de Workflows. También se han empleado prácticas como la automatización de pruebas, la construcción y despliegue automatizado, así como la integración con herramientas de revisión de código como Codecov para garantizar la calidad del código. Además, se ha empleado Java CI (Continuous Integration), lo que ha permitido automatizar tareas como la compilación del código, la ejecución de pruebas unitarias y de integración, y la generación de informes de cobertura de código. Esto ha contribuido a un flujo de trabajo claro y bien definido para la integración continua, lo que ha permitido una entrega más rápida y confiable de cambios al proyecto.
+![Workflow](img/workflow.png)
