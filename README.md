@@ -34,9 +34,6 @@ En esta practica el objetivo ha sido la creacion de pruebas unitarias, asi como,
 -   Comprender, aplicar y analizar técnicas de medición sobre entidades de productos software relacionados con conjuntos de pruebas de software.
 -   Comprender, aplicar y analizar medidas relacionadas sobre entidades de proceso y recursos de prueba del software.
 
-# **Solución**
-Se ha realizado un fork al repositorio proporcionado: 
-
 # **Preguntas**
 
 ## **¿Se ha realizado trabajo en equipo?**
